@@ -1,0 +1,147 @@
+<app-employee-list [msg]="info" (passValue)="readMessage($event)"></app-employee-list>
+
+<h3>{{childMsg}}</h3>
+
+<app-student-list-demo [msg]="info1" (passValue)="readmsg($event)"> </app-student-list-demo>
+
+<h2>{{childstudmsg}}</h2>
+
+<app-employee></app-employee>
+
+<app-register-component></app-register-component>
+
+<app-login></app-login>
+
+<!--earlier version of angular -->
+<div *ngIf="isDisplay; else elseBlock">
+    This is true block
+</div>
+
+    <ng-template #elseBlock>
+        This is false block
+        </ng-template>
+ 
+ <!--angular 17 version-->
+
+ @if( isDisplay)
+ {
+    <div>This is true block used with Angular 17</div>
+ }
+@else{
+    <div>This is false block used with Angular 17</div>
+}
+
+<!--earlier version of angular of switch case-->
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'"> You have selected red color</div>
+    <div *ngSwitchCase="'green'"> You have selected green color</div>
+    <div *ngSwitchCase="'blue'"> You have selected blue color</div>
+    <div *ngSwitchDefault> You have not selected rgb color</div>
+
+</div>
+
+<!--angular 17 version of switch case-->
+
+@switch(color){
+    @case('red'){
+        <div> You have selected red color</div>
+    }
+    @case('green'){
+        <div> You have selected green color</div>
+    }
+    @case('blue'){
+        <div> You have selected blue color</div>
+    }
+    @default{
+        <div> You have not selected rgb color</div>
+    }    
+    
+}
+
+<div [ngStyle]="{'background-color':'red','color':'white'}">
+    this is sample text in div
+</div>
+
+<div [ngStyle]="applyColor()">
+    this div applied color from class method
+</div>
+
+<div [ngClass]="'first second'">
+    this is example of ng class
+</div>  <br><br>
+
+
+<button class="btn btn-success" (click)="Success()">
+    Toggle Success
+    </button>
+
+    <button class="btn btn-danger" (click)="Error()">
+        Toggle Error
+        </button>
+
+        <button class="btn btn-warning" (click)="Warning()">
+            Toggle Warning
+            </button>
+
+            <h3 class="display" [ngClass]="{'Success':isSuccess,'Error':isError,'Warning':isWarning}">
+                {{message}}
+            </h3>
+
+
+            <h2 appHighlight>This is example of custom directive</h2>
+
+
+            <h1>Built in pipe in angular</h1>
+            <p>Original text {{text}}</p>
+            <p>in lowercase {{text | lowercase}}</p>
+            <p>in Uppercase {{text | uppercase}}</p>
+
+            <p>Current date {{currentDate}}</p>
+            <p>in short Current date {{currentDate | date:'shortDate'}}</p>
+            <p>in medium Current date {{currentDate | date:'mediumDate'}}</p>
+            <p>in long Current date {{currentDate | date:'longDate'}}</p>
+            <p>dd-mm-yy {{currentDate | date:'dd-MM-yy'}}</p>
+            <p>dd/mm/yy {{currentDate | date:'dd/MM/yy'}}</p>
+            <p>dd/m/yy {{currentDate | date:'dd/M/yy'}}</p>
+            <p>dd/mmm/yy {{currentDate | date:'dd/MMM/yy'}}</p>
+            <p>dd/mmmm/yy {{currentDate | date:'dd/MMMM/yy'}}</p>
+
+            <p>{{150|currency}}</p>
+            <p>{{150|currency:'INR'}}</p>
+            <p>{{150|currency:'EUR'}}</p>
+
+            <p>Number{{23456}}</p>
+            <p>{{23456|number}}</p>
+            <p>{{23456|number:'5.2-3'}}</p>
+            <p>{{23456|number:'7.2-3'}}</p>
+
+           <p>{{currentDate|date:'fullDate'}}</p> 
+
+            <p>{{23456|currency:'INR':'symbol':'4.2'}}</p> 
+
+            <h1>Grid Example</h1>
+            
+            <div class="container" >
+                <div class="row">Header</div>
+                <div class="row align-items-start ">
+                    <div class="col-1 ">
+                        column
+                        </div>
+                     </div>
+                        <div class="row">
+                            <div class="col">
+                                company
+                                </div>
+                                <div class="col">
+                                    social media
+                                    </div>
+                                    <div class="col">
+                                        xyz
+                                        </div>
+                        </div><br><br>
+
+        <p>Square is:{{25|myMath}}</p>                
+        <p>Square is:{{4|myMath}}</p>           
+
+                        

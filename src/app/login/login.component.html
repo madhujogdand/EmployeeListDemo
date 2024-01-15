@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="form-floating mb-3">
+        <input type="email" [(ngModel)]="email" class="form-control" id="email" placeholder="email">
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="password" [(ngModel)]="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div><br>
+
+      <div class="form-floating mb-3">
+        <button type="button" class="btn btn-outline-success" (click)="addLogin()">Login</button>
+      </div>
+
+
+    </div>
+

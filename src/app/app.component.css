@@ -1,0 +1,31 @@
+.first{
+    background-color: aqua;
+}
+
+.second{
+    font-size: 20px;
+}
+
+.Success{
+    color: black;
+    font-size: medium;
+    width: 350px;
+    padding: 20px;
+    background: lightgreen;
+}
+
+.Error{
+    color: black;
+    font-size: medium;
+    width: 350px;
+    padding: 20px;
+    background:red;
+}
+
+.Warning{
+    color: black;
+    font-size: medium;
+    width: 350px;
+    padding: 20px;
+    background: yellow;
+}
